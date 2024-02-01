@@ -4,13 +4,16 @@
 # allowed_regions = ["Tibet", "Central Asia", "Mongolia", "Persia / Persia", "Khorasan", "India", "China", "East Indies"]
 # file_to_write_to = "ck3Convert_tags.txt"
 # allowed_regions = ["North America", "Amazonia", "Andes", "Central America", "Southern Africa", "Oceania", "East Siberia"]
-file_to_write_to = "editMyName.txt"
-allowed_regions = []
+
+
+file_to_write_to = "editMyName.txt" # <-- here goes the name of the file that shall be created/edited
+allowed_regions = [] # <-- here go the allowed regions and subcontinents
+
 
 if allowed_regions == []:
     print("The list of allowed Regions is empty, and no Tags will be written into the file. Are you sure this is what you want?")
 tags=[]
-with open("list of all tags.txt","r") as file:
+with open("list_of_all_tags.txt","r") as file:
     lines = file.readlines()
     for line in lines:
         if any(region in line for region in allowed_regions):
