@@ -1,6 +1,6 @@
 ## Welcome to the EU4 Tag Remover!
 
-#### What is this?
+### What is this?
 The EU4 Tag Remover is a collection of Python scripts, with which you can generate a list of tags based on their capital Super Region (Subcontinent), Region, or province, and then generate history files that either uncolonize all provinces of the specified tags, or uncolinize every province **except** those of tags specified in the list. 
 
 ### Why?
