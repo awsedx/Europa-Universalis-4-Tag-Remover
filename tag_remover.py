@@ -1,3 +1,5 @@
+# The EU4-Tag-Remover, from https://github.com/awsedx/Europa-Universalis-4-Tag-Remover
+
 import shutil
 from os import listdir, remove
 from time import time
