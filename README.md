@@ -21,5 +21,8 @@ Start the EU4 launcher, click on "all installed mods" on the left, and then on "
 
 In there, create a folder called history, and then inside of there another folder called provinces (When modding any paradox game, youre usually replacing existing files or adding onto them with new content. The game stores its setup at game start in the folder "history", and as we're editing the starting setup, we'll be overriding part of it). Copy all files from the folder output\provinces to the provinces folder of your new mod. Reload the mod in the launcher (or close and restart the launcher), add your mod to a play set, and start up the game. You're done!
 
+### Extra Features
+The scripts tag-finder and tag-remover allow you to generate the tag-list-file and generate province history files from such a file independantly of one another. This can be useful if you want to manually add or remove tags from the list. For example, when playing in europe, you may want to have levantine countries present to form the perifferie. However, even though Qara Quyunlu covers most of Mesopotamia, because it's capital is located in the persia region, this would decolonize it's region of Mesopotamia, leaving a rather jarring gap. To fix this, one may generate the tag list file, manually add QAR, and then run the second script to generate new province history files, this time including Qara Quyunlu.
+
 ### May I Modify, or Redistribute this elsewhere?
 Feel free, but please give credit in the form of a link to this github page. Thanks!
