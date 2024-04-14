@@ -2,7 +2,7 @@ from time import time
 
 
 file_to_write_to = (
-    "editMyName.txt"  # <-- here goes the name of the file that shall be created/edited
+    "editMyName.txt"
 )
 allowed_regions = [
     "Western Europe",
@@ -12,7 +12,7 @@ allowed_regions = [
     "Anatolia",
     "Caucasia",
     "Maghreb",
-]  # <-- here go the allowed regions and subcontinents
+]
 
 
 start_all = time()

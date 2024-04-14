@@ -3,13 +3,11 @@ from os import listdir, remove
 from time import time
 
 
-file_to_write_to = (
-    "editMyName.txt"  # <-- here goes the name of the file that shall be created/edited
-)
-allowed_regions = []  # <-- here go the allowed regions and subcontinents
+file_to_write_to = ("editMyName.txt")  # <-- this will be the name of your file containing all tags within the specified regions
+allowed_regions = []  # <-- here go the allowed regions and subcontinents, who'se tags you would like to filter for
 reverse_removal = False  # <--- set to False to remove all counries within the specified regions, set to True to remove every country EXCEPT those in the specified regions
 enable_copying = False  # if you want the output files automatically copied to another directory, like a mod, set this to True
-destination = ""  # , add the path to copy the files to here. Dont forget trailing "/"
+destination = ""  # add the path to copy the files to here. Dont forget a trailing "/" at the end
 overwrite = False  # if automatic copying is enabled, this will delete preexisting files in your specified folder. WARNING: if you specify the wrong folder, ALL FILES WITHIN WILL BE DELETED!
 
 # Here are some examples on this might look
@@ -172,17 +170,20 @@ duration_checking = time() - start_checking
 # ///////////////////////////////////////// deleting from and copying output files to specified folder //////////////////////////////////////////////
 start_copying = time()
 if enable_copying:
-    if overwrite:
-        dirs = listdir(destination)
-        if "desktop.ini" in dirs:
-            dirs.remove("desktop.ini")
+    if destination == "":
+        "no destination entered. files will not be copied or deleted."
+    else:
+        if overwrite:
+            dirs = listdir(destination)
+            if "desktop.ini" in dirs:
+                dirs.remove("desktop.ini")
+            for dir in dirs:
+                print(f"deleting {dir} in " + destination)
+                remove(destination + dir)
+        dirs = listdir("output/provinces/")
         for dir in dirs:
-            print(f"deleting {dir} in " + destination)
-            remove(destination + dir)
-    dirs = listdir("output/provinces/")
-    for dir in dirs:
-        print(f"copying {dir} to { destination}")
-        shutil.copy2("output/provinces/" + dir, destination)
+            print(f"copying {dir} to { destination}")
+            shutil.copy2("output/provinces/" + dir, destination)
 duration_copying = time() - start_copying
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

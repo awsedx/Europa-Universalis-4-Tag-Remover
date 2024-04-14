@@ -4,10 +4,10 @@ from time import time
 
 
 file_to_open = "editMyName.txt"
-reverse_removal = True  # (because we want to delete all tags EXCEPT the european ones)
-enable_copying = True
-destination = "c:/Users/jason/Documents/Paradox Interactive/Europa Universalis IV/mod/test/history/provinces/"
-overwrite = True
+reverse_removal = True
+enable_copying = False
+destination = ""
+overwrite = False
 
 
 start_all = time()
