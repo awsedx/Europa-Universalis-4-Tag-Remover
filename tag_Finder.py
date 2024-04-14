@@ -21,6 +21,7 @@ with open("list_of_all_tags.txt","r") as file:
             while i<len(line)-2:
                 if line[i].isupper() and line[i+1].isupper() and line[i+2].isupper():
                     tags.append(line[i:i+3])
+                    # break
                 i+=1
 with open(file_to_write_to,"w") as file:
     content = ""
