@@ -1,7 +1,7 @@
 ## Welcome to the EU4 Tag Remover!
 
 ### What is this?
-The EU4 Tag Remover is a collection of Python scripts, with which you can generate a list of tags based on their capital Super Region (Subcontinent), Region, or province, and then generate history files that either uncolonize all provinces owned by the specified tags in 1444, or uncolinize every province **except** those owned by the tags specified in the list.
+The EU4 Tag Remover is a collection of Python scripts, with which you can generate a list of tags based on their capital Super Region (Subcontinent), Region, or province, and then generate history files that either uncolonize (make unowned at game start) all provinces owned by the specified tags in 1444, or uncolonize every province **except** those owned by the tags specified in the list.
 
 ### Why?
 To improve performance. If you're playing a non-colonial game in europe, you probably don't really care about what those natives in the new world or them there sub saharan Africans are up to, but your Computer has to spend ressources on them all the same. Culling these countries drastically increases performance, especially on speed 5.
